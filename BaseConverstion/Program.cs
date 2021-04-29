@@ -5,9 +5,9 @@ namespace BaseConverstion
 {
     class Program
     {
-        static string base34 = "7ABCDE123FGHIJ456KLMNPQRSTUV89WXYZ";
+        static readonly string base34 = "7ABCDE123FGHIJ456KLMNPQRSTUV89WXYZ";
        
-        private static string convertToBase34(int number, string baseString = "")
+        private static string ConvertToBase34(int number, string baseString = "")
         {
             if (string.IsNullOrEmpty(baseString))
                 baseString = base34;
@@ -23,7 +23,7 @@ namespace BaseConverstion
             return strValue;
         }
 
-        private static int convertToBase10(string base34String, string baseString = "")
+        private static int ConvertToBase10(string base34String, string baseString = "")
         {
             if (string.IsNullOrEmpty(baseString))
                 baseString = base34;
@@ -47,7 +47,7 @@ namespace BaseConverstion
 
             for (sequence = 1; sequence < 1300; sequence++)
             {                
-                base34val = convertToBase34(sequence);
+                base34val = ConvertToBase34(sequence);
                 Console.WriteLine($"\nSequence {sequence} was converted to {base34val}");
 
                 if (base34val == "7A")  //7 is zero because it is at the zeroth index
@@ -59,11 +59,11 @@ namespace BaseConverstion
             }
 
             //sequence = 1;
-            //base34val = convertToBase34(sequence);
+            //base34val = ConvertToBase34(sequence);
             //Console.WriteLine($"\nSequence {sequence} was converted to {base34val}");
 
             //base34val = "777A";
-            //int number = convertToBase10(base34val);
+            //int number = ConvertToBase10(base34val);
             //Console.WriteLine($"String {base34val} was converted to {number}");
 
 
