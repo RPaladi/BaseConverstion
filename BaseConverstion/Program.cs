@@ -45,7 +45,7 @@ namespace BaseConverstion
             int sequence = 1;
             string base34val = "7A";
 
-            for (sequence = 1; sequence < 150000; sequence++)
+            for (sequence = 1; sequence < 1300; sequence++)
             {                
                 base34val = convertToBase34(sequence);
                 Console.WriteLine($"\nSequence {sequence} was converted to {base34val}");
